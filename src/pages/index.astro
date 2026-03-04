@@ -79,79 +79,26 @@ import ProjectCard from '../components/ProjectCard.astro';
         </p>
       </div>
       <div>
-        <p class="text-neon text-sm mb-3 uppercase">&gt; languages_</p>
-        <div class="grid grid-cols-2 gap-1 text-sm mb-6">
-          {[
-            "JavaScript",
-            "TypeScript",
-            "Python",
-            "C++",
-            "Rust",
-            "Java",
-            "PHP",
-            "SQL / PL/SQL",
-            "HTML",
-            "CSS",
-          ].map((skill) => (
-            <div class="text-gray border-l-2 border-border pl-3 py-1 hover:border-neon hover:text-light">
-              {skill}
+        {[
+          { label: "languages", skills: ["JavaScript", "TypeScript", "Python", "C++", "Rust", "Java", "PHP", "SQL / PL/SQL", "HTML", "CSS"] },
+          { label: "frameworks + tools", skills: ["React", "Node.js", "Flask", "gRPC / Tonic", "Docker", "Git", "Linux", "CI/CD", "Oracle", "PostgreSQL"] },
+          { label: "ml + ai", skills: ["TensorFlow", "PyTorch", "Scikit-learn", "LangChain", "Hugging Face", "AWS Bedrock", "AWS SageMaker", "RAG"] },
+          { label: "cloud + infra", skills: ["AWS (EC2, S3, Lambda)", "Vector Databases", "SurrealDB", "DevOps", "Agile", "MCP"] },
+        ].map((category) => (
+          <details class="mb-4 border border-border hover:border-neon group">
+            <summary class="text-neon text-sm px-4 py-3 uppercase tracking-wider cursor-pointer list-none flex items-center justify-between">
+              <span>&gt; {category.label}_</span>
+              <span class="text-gray group-open:text-neon">[+]</span>
+            </summary>
+            <div class="grid grid-cols-2 gap-1 text-sm px-4 pb-4">
+              {category.skills.map((skill) => (
+                <div class="text-gray border-l-2 border-border pl-3 py-1 hover:border-neon hover:text-light">
+                  {skill}
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-
-        <p class="text-neon text-sm mb-3 uppercase">&gt; frameworks + tools_</p>
-        <div class="grid grid-cols-2 gap-1 text-sm mb-6">
-          {[
-            "React",
-            "Node.js",
-            "Flask",
-            "gRPC / Tonic",
-            "Docker",
-            "Git",
-            "Linux",
-            "CI/CD",
-            "Oracle",
-            "PostgreSQL",
-          ].map((skill) => (
-            <div class="text-gray border-l-2 border-border pl-3 py-1 hover:border-neon hover:text-light">
-              {skill}
-            </div>
-          ))}
-        </div>
-
-        <p class="text-neon text-sm mb-3 uppercase">&gt; ml + ai_</p>
-        <div class="grid grid-cols-2 gap-1 text-sm mb-6">
-          {[
-            "TensorFlow",
-            "PyTorch",
-            "Scikit-learn",
-            "LangChain",
-            "Hugging Face",
-            "AWS Bedrock",
-            "AWS SageMaker",
-            "RAG",
-          ].map((skill) => (
-            <div class="text-gray border-l-2 border-border pl-3 py-1 hover:border-neon hover:text-light">
-              {skill}
-            </div>
-          ))}
-        </div>
-
-        <p class="text-neon text-sm mb-3 uppercase">&gt; cloud + infra_</p>
-        <div class="grid grid-cols-2 gap-1 text-sm">
-          {[
-            "AWS (EC2, S3, Lambda)",
-            "Vector Databases",
-            "SurrealDB",
-            "DevOps",
-            "Agile",
-            "MCP",
-          ].map((skill) => (
-            <div class="text-gray border-l-2 border-border pl-3 py-1 hover:border-neon hover:text-light">
-              {skill}
-            </div>
-          ))}
-        </div>
+          </details>
+        ))}
       </div>
     </div>
   </Section>

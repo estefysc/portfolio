@@ -38,6 +38,10 @@
     color: var(--color-dark);
   }
 
+  /* Hide the default browser disclosure triangle on <details> */
+  details summary::-webkit-details-marker {
+    display: none;
+  }
 }
 
 @keyframes blink {
