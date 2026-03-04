@@ -1,0 +1,251 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<Layout>
+  <!-- HERO -->
+  <section class="border-b border-border px-6 py-24 md:py-32">
+    <div class="max-w-5xl mx-auto">
+      <pre class="text-neon text-xs mb-8 hidden md:block">
+ ┌─────────────────────────────────────────┐
+ │  STATUS: ONLINE                         │
+ │  LAST UPDATED: 2026                     │
+ └─────────────────────────────────────────┘</pre>
+      <p class="text-gray text-sm mb-4">&gt; hello, i'm</p>
+      <h1 class="text-5xl md:text-7xl font-bold text-light mb-6">
+        estefania<span class="text-neon">.</span><span class="text-neon animate-[blink_1s_step-end_infinite]">│</span>
+      </h1>
+      <p class="text-gray text-lg md:text-xl max-w-2xl mb-8">
+        software engineer building systems, web applications,
+        contributing to open-source browser engines, and exploring
+        machine learning and AI. from conventional programming to
+        agentic coding, from full-stack web apps to low-level C++,
+        <br />
+        <span class="text-neon">i like understanding how things work under the hood.</span>
+      </p>
+      <div class="flex gap-4 text-sm">
+        <a href="#projects" class="border border-neon text-neon px-4 py-2 hover:bg-neon hover:text-dark uppercase tracking-wider">
+          [view work]
+        </a>
+        <a href="#contact" class="border border-border text-light px-4 py-2 hover:bg-light hover:text-dark uppercase tracking-wider">
+          [contact]
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <Section id="about" title="about">
+    <div class="grid md:grid-cols-2 gap-8 mb-10">
+      <div>
+        <p class="text-gray mb-4">
+          &gt; Estefania Sanchez is based in Sarasota, FL with experience
+          building and upgrading web-based applications at
+          <span class="text-light">New College of Florida</span>, including
+          the Student Evaluation System and Faculty Annual Activity Report,
+          working across both front-end and back-end with PHP, JavaScript,
+          PL/SQL, Python, and more.
+        </p>
+        <p class="text-gray mb-4">
+          &gt; previously worked as a junior software developer at
+          <span class="text-light">AtLarge</span>, supporting the full
+          development lifecycle using Python, TypeScript, React, and PHP.
+          collaborated with senior engineers on debugging, code reviews,
+          and project planning.
+        </p>
+        <p class="text-gray mb-4">
+          &gt; active open-source contributor to the
+          <span class="text-light">Ladybird browser project</span>,
+          implementing web API features (Badging API, Clear-Site-Data,
+          Battery Status API) and fixing browser engine bugs in C++ across
+          a 100,000+ line codebase. also contributed a full-stack locale
+          settings feature to the <span class="text-light">AvoRed Rust CMS</span>
+          using Rust, gRPC, SurrealDB, React, and TypeScript.
+        </p>
+        <p class="text-gray mb-4">
+          &gt; volunteered as an <span class="text-light">FTC robotics
+          programming mentor</span> at FUNducation, leading students through
+          coding, debugging, and competition strategy using Java and the
+          FTC SDK.
+        </p>
+        <p class="text-gray">
+          &gt; holds <span class="text-light">AWS certifications</span> in
+          Machine Learning Engineer Associate and AI Practitioner, plus a
+          Machine Learning Specialization from DeepLearning.AI and Stanford
+          University. holds a BAS in Computing Technology and
+          Software Development from Valencia College.
+        </p>
+      </div>
+      <div>
+        <p class="text-neon text-sm mb-3 uppercase">&gt; languages_</p>
+        <div class="grid grid-cols-2 gap-1 text-sm mb-6">
+          {[
+            "JavaScript",
+            "TypeScript",
+            "Python",
+            "C++",
+            "Rust",
+            "Java",
+            "PHP",
+            "SQL / PL/SQL",
+            "HTML",
+            "CSS",
+          ].map((skill) => (
+            <div class="text-gray border-l-2 border-border pl-3 py-1 hover:border-neon hover:text-light">
+              {skill}
+            </div>
+          ))}
+        </div>
+
+        <p class="text-neon text-sm mb-3 uppercase">&gt; frameworks + tools_</p>
+        <div class="grid grid-cols-2 gap-1 text-sm mb-6">
+          {[
+            "React",
+            "Node.js",
+            "Flask",
+            "gRPC / Tonic",
+            "Docker",
+            "Git",
+            "Linux",
+            "CI/CD",
+            "Oracle",
+            "PostgreSQL",
+          ].map((skill) => (
+            <div class="text-gray border-l-2 border-border pl-3 py-1 hover:border-neon hover:text-light">
+              {skill}
+            </div>
+          ))}
+        </div>
+
+        <p class="text-neon text-sm mb-3 uppercase">&gt; ml + ai_</p>
+        <div class="grid grid-cols-2 gap-1 text-sm mb-6">
+          {[
+            "TensorFlow",
+            "PyTorch",
+            "Scikit-learn",
+            "LangChain",
+            "Hugging Face",
+            "AWS Bedrock",
+            "AWS SageMaker",
+            "RAG",
+          ].map((skill) => (
+            <div class="text-gray border-l-2 border-border pl-3 py-1 hover:border-neon hover:text-light">
+              {skill}
+            </div>
+          ))}
+        </div>
+
+        <p class="text-neon text-sm mb-3 uppercase">&gt; cloud + infra_</p>
+        <div class="grid grid-cols-2 gap-1 text-sm">
+          {[
+            "AWS (EC2, S3, Lambda)",
+            "Vector Databases",
+            "SurrealDB",
+            "DevOps",
+            "Agile",
+            "MCP",
+          ].map((skill) => (
+            <div class="text-gray border-l-2 border-border pl-3 py-1 hover:border-neon hover:text-light">
+              {skill}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- PROJECTS -->
+  <Section id="projects" title="projects">
+    <div class="grid md:grid-cols-2 gap-4">
+      <ProjectCard
+        title="project-alpha"
+        description="A full-stack web application with real-time features. Built to solve [problem X] with a focus on performance and clean architecture."
+        tech={["React", "Node.js", "PostgreSQL", "WebSocket"]}
+        link="https://example.com"
+        github="https://github.com/estefania/project-alpha"
+      />
+      <ProjectCard
+        title="cli-toolkit"
+        description="A command-line utility that automates [workflow Y]. Designed with composability and Unix philosophy in mind."
+        tech={["Python", "Click", "SQLite"]}
+        github="https://github.com/estefania/cli-toolkit"
+      />
+      <ProjectCard
+        title="api-service"
+        description="RESTful API with authentication, rate limiting, and comprehensive test coverage. Handles [Z] requests per second."
+        tech={["TypeScript", "Express", "Redis", "Docker"]}
+        github="https://github.com/estefania/api-service"
+      />
+      <ProjectCard
+        title="this-portfolio"
+        description="The site you're looking at. Brutalist design, zero JavaScript shipped, built with Astro and deployed on Cloudflare Pages."
+        tech={["Astro", "Tailwind CSS", "Cloudflare Pages"]}
+        github="https://github.com/estefania/portfolio"
+      />
+    </div>
+  </Section>
+
+  <!-- EXPERIENCE -->
+  <Section id="experience" title="experience">
+    <div class="space-y-6">
+      <div class="border border-border p-6 hover:border-neon group">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+          <h3 class="text-light font-bold group-hover:text-neon">
+            &gt; Software Engineer @ Company
+          </h3>
+          <span class="text-gray text-sm">2024 — present</span>
+        </div>
+        <p class="text-gray text-sm">
+          Building and maintaining web applications. Working across the
+          stack with a focus on frontend architecture and developer experience.
+        </p>
+      </div>
+
+      <div class="border border-border p-6 hover:border-neon group">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+          <h3 class="text-light font-bold group-hover:text-neon">
+            &gt; Junior Developer @ Startup
+          </h3>
+          <span class="text-gray text-sm">2023 — 2024</span>
+        </div>
+        <p class="text-gray text-sm">
+          Shipped features end-to-end in an agile environment. Learned to
+          write production-quality code under real constraints.
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- CONTACT -->
+  <Section id="contact" title="contact">
+    <div class="max-w-xl">
+      <p class="text-gray mb-6">
+        &gt; Want to work together or just say hello?
+        <br />
+        &gt; Reach me through any of these channels:
+      </p>
+      <div class="space-y-2 text-sm">
+        <div class="border border-border p-3 hover:border-neon">
+          <a href="mailto:hello@estefania.dev" class="text-neon hover:bg-neon hover:text-dark px-1">
+            email
+          </a>
+          <span class="text-gray"> — hello@estefania.dev</span>
+        </div>
+        <div class="border border-border p-3 hover:border-neon">
+          <a href="https://github.com/estefania" target="_blank" rel="noopener noreferrer" class="text-neon hover:bg-neon hover:text-dark px-1">
+            github
+          </a>
+          <span class="text-gray"> — github.com/estefania</span>
+        </div>
+        <div class="border border-border p-3 hover:border-neon">
+          <a href="https://linkedin.com/in/estefania" target="_blank" rel="noopener noreferrer" class="text-neon hover:bg-neon hover:text-dark px-1">
+            linkedin
+          </a>
+          <span class="text-gray"> — linkedin.com/in/estefania</span>
+        </div>
+      </div>
+    </div>
+  </Section>
+</Layout>
