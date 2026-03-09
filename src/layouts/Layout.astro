@@ -6,7 +6,7 @@ interface Props {
   title?: string;
 }
 
-const { title = "estefania // software engineer" } = Astro.props;
+const { title = "estefania sanchez" } = Astro.props;
 ---
 
 <html lang="en">
@@ -30,9 +30,28 @@ const { title = "estefania // software engineer" } = Astro.props;
     </main>
     <footer class="border-t border-border px-6 py-8 text-gray text-sm">
       <div class="max-w-5xl mx-auto flex justify-between items-center">
-        <span>&copy; {new Date().getFullYear()} // all rights reserved</span>
+        <span>&copy; {new Date().getFullYear()} estefania sanchez // all rights reserved</span>
         <span class="text-neon tracking-wider">&lt; / &gt;</span>
       </div>
     </footer>
+  <script>
+    // Easter egg for anyone who opens DevTools
+    console.log(
+      "%c> ah, you're looking under the hood? nice.",
+      "color: #ff6600; font-family: monospace; font-size: 16px; font-weight: bold;"
+    );
+    console.log(
+      "%c> the source is on github.",
+      "color: #ffffff; font-family: monospace; font-size: 14px;"
+    );
+    console.log(
+      "%c> github.com/estefysc/portfolio",
+      "color: #888888; font-family: monospace; font-size: 12px;"
+    );
+    console.log(
+      "%c> or just hire me: e.snchez.c@gmail.com",
+      "color: #ff6600; font-family: monospace; font-size: 14px; font-weight: bold;"
+    );
+  </script>
   </body>
 </html>

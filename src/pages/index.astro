@@ -13,25 +13,27 @@ import ProjectCard from '../components/ProjectCard.astro';
  │  STATUS: ONLINE                         │
  │  LAST UPDATED: 2026                     │
  └─────────────────────────────────────────┘</pre>
-      <p class="text-gray text-sm mb-4">&gt; hello, i'm</p>
-      <h1 class="text-5xl md:text-7xl font-bold text-light mb-6">
-        estefania<span class="text-neon">.</span><span class="text-neon animate-[blink_1s_step-end_infinite]">│</span>
-      </h1>
-      <p class="text-gray text-lg md:text-xl max-w-2xl mb-8">
-        software engineer building systems, web applications,
-        contributing to open-source browser engines, and exploring
-        machine learning and AI. from conventional programming to
-        agentic coding, from full-stack web apps to low-level C++,
-        <br />
-        <span class="text-neon">i like understanding how things work under the hood.</span>
-      </p>
-      <div class="flex gap-4 text-sm">
-        <a href="#projects" class="border border-neon text-neon px-4 py-2 hover:bg-neon hover:text-dark uppercase tracking-wider">
-          [view work]
-        </a>
-        <a href="#contact" class="border border-border text-light px-4 py-2 hover:bg-light hover:text-dark uppercase tracking-wider">
-          [contact]
-        </a>
+      <p class="text-gray text-sm mb-4">&gt; <span id="typed-intro"></span><span id="typed-cursor" class="text-neon animate-[blink_1s_step-end_infinite]">_</span></p>
+      <div id="hero-content" class="hidden">
+        <h1 class="text-5xl md:text-7xl font-bold text-light mb-6">
+          estefania<span class="text-neon">.</span><span class="text-neon animate-[blink_1s_step-end_infinite]">_</span>
+        </h1>
+        <p class="text-gray text-lg md:text-xl max-w-2xl mb-8">
+          software engineer building systems, web applications,
+          contributing to open source, and exploring machine learning
+          and AI. from conventional programming to agentic coding,
+          from full-stack web apps to <span class="whitespace-nowrap">low-level C++,</span>
+          <br />
+          <span class="text-neon">i like understanding how things work under the hood.</span>
+        </p>
+        <div class="flex gap-4 text-sm">
+          <a href="#projects" class="border border-neon text-neon px-4 py-2 hover:bg-neon hover:text-dark uppercase tracking-wider">
+            [view work]
+          </a>
+          <a href="#contact" class="border border-border text-light px-4 py-2 hover:bg-light hover:text-dark uppercase tracking-wider">
+            [contact]
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -41,51 +43,33 @@ import ProjectCard from '../components/ProjectCard.astro';
     <div class="grid md:grid-cols-2 gap-8 mb-10">
       <div>
         <p class="text-gray mb-4">
-          &gt; Estefania Sanchez is based in Sarasota, FL with experience
-          building and upgrading web-based applications at
-          <span class="text-light">New College of Florida</span>, including
-          the Student Evaluation System and Faculty Annual Activity Report,
-          working across both front-end and back-end with PHP, JavaScript,
-          PL/SQL, Python, and more.
-        </p>
-        <p class="text-gray mb-4">
-          &gt; previously worked as a junior software developer at
-          <span class="text-light">AtLarge</span>, supporting the full
-          development lifecycle using Python, TypeScript, React, and PHP.
-          collaborated with senior engineers on debugging, code reviews,
-          and project planning.
-        </p>
-        <p class="text-gray mb-4">
-          &gt; active open-source contributor to the
-          <span class="text-light">Ladybird browser project</span>,
-          implementing web API features (Badging API, Clear-Site-Data,
-          Battery Status API) and fixing browser engine bugs in C++ across
-          a 100,000+ line codebase. also contributed a full-stack locale
-          settings feature to the <span class="text-light">AvoRed Rust CMS</span>
-          using Rust, gRPC, SurrealDB, React, and TypeScript.
-        </p>
-        <p class="text-gray mb-4">
-          &gt; volunteered as an <span class="text-light">FTC robotics
-          programming mentor</span> at FUNducation, leading students through
-          coding, debugging, and competition strategy using Java and the
-          FTC SDK.
+          &gt; Estefania Sanchez is a software engineer based in
+          Sarasota, FL. she holds a Bachelor of Applied Science in
+          Computing Technology and Software Development from
+          <span class="text-light">Valencia College</span>.
+          she also studied music composition at
+          <span class="text-light">State College of Florida</span>.
         </p>
         <p class="text-gray">
-          &gt; holds <span class="text-light">AWS certifications</span> in
-          Machine Learning Engineer Associate and AI Practitioner, plus a
-          Machine Learning Specialization from DeepLearning.AI and Stanford
-          University. holds a BAS in Computing Technology and
-          Software Development from Valencia College.
+          &gt; outside of code, she's passionate about
+          <span class="text-light">painting</span>,
+          <span class="text-light">music</span>, and
+          <span class="text-light">soccer</span>.
+        </p>
+        <p class="text-gray mt-4">
+          &gt; explore the technologies she's worked with in this section.
         </p>
       </div>
       <div>
         {[
-          { label: "languages", skills: ["JavaScript", "TypeScript", "Python", "C++", "Rust", "Java", "PHP", "SQL / PL/SQL", "HTML", "CSS"] },
-          { label: "frameworks + tools", skills: ["React", "Node.js", "Flask", "gRPC / Tonic", "Docker", "Git", "Linux", "CI/CD", "Oracle", "PostgreSQL"] },
-          { label: "ml + ai", skills: ["TensorFlow", "PyTorch", "Scikit-learn", "LangChain", "Hugging Face", "AWS Bedrock", "AWS SageMaker", "RAG"] },
-          { label: "cloud + infra", skills: ["AWS (EC2, S3, Lambda)", "Vector Databases", "SurrealDB", "DevOps", "Agile", "MCP"] },
+          { label: "languages", skills: ["JavaScript", "TypeScript", "Python", "C++", "Rust", "Java", "PHP", "SQL / PL/SQL", "HTML", "CSS", "C#"] },
+          { label: "frameworks + tools", skills: ["React", "Node.js", "Flask", "gRPC / Tonic", "Docker", "Git", "Linux", "CI/CD"] },
+          { label: "databases", skills: ["PostgreSQL", "Oracle", "SurrealDB", "Vector Databases"] },
+          { label: "ml + ai", skills: ["TensorFlow", "PyTorch", "Scikit-learn", "Hugging Face", "AWS Bedrock", "AWS SageMaker"] },
+          { label: "agentic coding", skills: ["Claude Code", "Cursor IDE", "ChatGPT", "LangChain", "LangGraph", "RAG", "MCP", "Generative AI"] },
+          { label: "cloud + infra", skills: ["AWS (EC2, S3, Lambda)", "DevOps", "Agile"] },
         ].map((category) => (
-          <details class="mb-4 border border-border hover:border-neon group">
+          <details name="skills" class="mb-4 border border-border hover:border-neon group">
             <summary class="text-neon text-sm px-4 py-3 uppercase tracking-wider cursor-pointer list-none flex items-center justify-between">
               <span>&gt; {category.label}_</span>
               <span class="text-gray group-open:text-neon">[+]</span>
@@ -99,6 +83,32 @@ import ProjectCard from '../components/ProjectCard.astro';
             </div>
           </details>
         ))}
+
+        <details name="skills" class="mb-4 border border-border hover:border-neon group">
+          <summary class="text-neon text-sm px-4 py-3 uppercase tracking-wider cursor-pointer list-none flex items-center justify-between">
+            <span>&gt; certifications_</span>
+            <span class="text-gray group-open:text-neon">[+]</span>
+          </summary>
+          <div class="text-sm px-4 pb-4 space-y-3">
+            {[
+              { name: "AWS Certified Machine Learning Engineer Associate", url: "https://aws.amazon.com/verification", id: "f13a9b29a62047629fc35884bf42b9b1" },
+              { name: "AWS Certified AI Practitioner", url: "https://aws.amazon.com/verification", id: "177e10883d114d3b96bfdfe777f06c19" },
+              { name: "DeepLearning.AI / Stanford ML Specialization", url: "https://www.coursera.org/account/accomplishments/specialization/N8BWHS72QUEZ" },
+            ].map((cert) => (
+              <div class="border-l-2 border-border pl-3 py-1 hover:border-neon">
+                <div class="flex items-start justify-between">
+                  <span class="text-gray hover:text-light">{cert.name}</span>
+                  <a href={cert.url} target="_blank" rel="noopener noreferrer" class="text-gray hover:bg-neon hover:text-dark px-1 ml-2 shrink-0">
+                    [verify]
+                  </a>
+                </div>
+                {cert.id && (
+                  <span class="text-xs text-gray">id: {cert.id}</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </details>
       </div>
     </div>
   </Section>
@@ -107,29 +117,28 @@ import ProjectCard from '../components/ProjectCard.astro';
   <Section id="projects" title="projects">
     <div class="grid md:grid-cols-2 gap-4">
       <ProjectCard
-        title="project-alpha"
-        description="A full-stack web application with real-time features. Built to solve [problem X] with a focus on performance and clean architecture."
-        tech={["React", "Node.js", "PostgreSQL", "WebSocket"]}
-        link="https://example.com"
-        github="https://github.com/estefania/project-alpha"
+        title="ladybird-browser"
+        description="Open-source contributor to Ladybird, a web browser building a modern engine from scratch. Implemented web API features (Badging API, Clear-Site-Data, Battery Status API), fixed browser engine bugs affecting CSP compliance, and contributed specification improvements to the WHATWG standards body. Navigated a 100,000+ line C++ codebase."
+        tech={["C++", "Web APIs", "Git", "CI/CD"]}
+        github="https://github.com/LadybirdBrowser/ladybird"
       />
       <ProjectCard
-        title="cli-toolkit"
-        description="A command-line utility that automates [workflow Y]. Designed with composability and Unix philosophy in mind."
-        tech={["Python", "Click", "SQLite"]}
-        github="https://github.com/estefania/cli-toolkit"
+        title="avored-rust-cms"
+        description="Open-source contributor to AvoRed, a headless CMS built in Rust. Implemented a full-stack locale settings feature, developed backend APIs using Rust and gRPC, built type-safe frontend components with React and TypeScript, and designed database schema migrations with SurrealDB."
+        tech={["Rust", "gRPC", "React", "TypeScript", "SurrealDB"]}
+        github="https://github.com/avored/avored-rust-cms"
       />
       <ProjectCard
-        title="api-service"
-        description="RESTful API with authentication, rate limiting, and comprehensive test coverage. Handles [Z] requests per second."
-        tech={["TypeScript", "Express", "Redis", "Docker"]}
-        github="https://github.com/estefania/api-service"
+        title="lottery-analyzer"
+        description="A web application for analyzing lottery data and patterns. Built as a full-stack project exploring data processing and visualization."
+        tech={["Python", "Heroku"]}
+        link="https://lottery-analyzer.herokuapp.com/"
       />
       <ProjectCard
         title="this-portfolio"
-        description="The site you're looking at. Brutalist design, zero JavaScript shipped, built with Astro and deployed on Cloudflare Pages."
+        description="The site you're looking at. Brutalist design, minimal JavaScript, built with Astro and Tailwind CSS, deployed on Cloudflare Pages."
         tech={["Astro", "Tailwind CSS", "Cloudflare Pages"]}
-        github="https://github.com/estefania/portfolio"
+        github="https://github.com/estefysc/portfolio"
       />
     </div>
   </Section>
@@ -137,31 +146,132 @@ import ProjectCard from '../components/ProjectCard.astro';
   <!-- EXPERIENCE -->
   <Section id="experience" title="experience">
     <div class="space-y-6">
-      <div class="border border-border p-6 hover:border-neon group">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-          <h3 class="text-light font-bold group-hover:text-neon">
-            &gt; Software Engineer @ Company
-          </h3>
-          <span class="text-gray text-sm">2024 — present</span>
-        </div>
-        <p class="text-gray text-sm">
-          Building and maintaining web applications. Working across the
-          stack with a focus on frontend architecture and developer experience.
-        </p>
-      </div>
 
-      <div class="border border-border p-6 hover:border-neon group">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-          <h3 class="text-light font-bold group-hover:text-neon">
-            &gt; Junior Developer @ Startup
-          </h3>
-          <span class="text-gray text-sm">2023 — 2024</span>
-        </div>
-        <p class="text-gray text-sm">
-          Shipped features end-to-end in an agile environment. Learned to
-          write production-quality code under real constraints.
-        </p>
-      </div>
+      <details name="experience" class="border border-border hover:border-neon group">
+        <summary class="p-6 cursor-pointer list-none">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+            <h3 class="text-light font-bold group-hover:text-neon">
+              &gt; Programmer Analyst @ New College of Florida
+            </h3>
+            <span class="text-gray text-sm">06/2023 — present</span>
+          </div>
+          <div class="flex items-start justify-between">
+            <p class="text-gray text-sm">
+              Building and upgrading web-based applications, working across
+              front-end and back-end, and automating departmental processes.
+            </p>
+            <span class="text-gray group-open:text-neon text-sm ml-4 shrink-0">[+]</span>
+          </div>
+        </summary>
+        <ul class="px-6 pb-6 space-y-2 text-gray text-sm">
+          <li class="border-l-2 border-border pl-3 hover:border-neon hover:text-light">
+            Developed and upgraded web-based applications, including the Student
+            Evaluation System and Faculty Annual Activity Report, enhancing user functionality.
+          </li>
+          <li class="border-l-2 border-border pl-3 hover:border-neon hover:text-light">
+            Worked on front-end and back-end tasks using PHP, JavaScript, PL/SQL, Python, HTML, CSS.
+          </li>
+          <li class="border-l-2 border-border pl-3 hover:border-neon hover:text-light">
+            Consulted with users to gather requirements, prototype solutions, and conduct tests
+            to ensure applications met their needs.
+          </li>
+          <li class="border-l-2 border-border pl-3 hover:border-neon hover:text-light">
+            Automated recurring activities using PL/SQL and Applications Manager (UC4),
+            streamlining departmental processes.
+          </li>
+          <li class="border-l-2 border-border pl-3 hover:border-neon hover:text-light">
+            Participated in database design and adhered to industry best practices
+            for system standards and documentation.
+          </li>
+          <li class="border-l-2 border-border pl-3 hover:border-neon hover:text-light">
+            Wrote and maintained technical documentation, system diagrams, and procedural
+            guides for both developers and users.
+          </li>
+        </ul>
+      </details>
+
+      <details name="experience" class="border border-border hover:border-neon group">
+        <summary class="p-6 cursor-pointer list-none">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+            <h3 class="text-light font-bold group-hover:text-neon">
+              &gt; FTC Robotics Programming Mentor @ FUNducation
+            </h3>
+            <span class="text-gray text-sm">09/2024 — 02/2025</span>
+          </div>
+          <div class="flex items-start justify-between">
+            <p class="text-gray text-sm">
+              Led the software development team and mentored students in
+              programming, debugging, and competition strategy for FTC robotics.
+            </p>
+            <span class="text-gray group-open:text-neon text-sm ml-4 shrink-0">[+]</span>
+          </div>
+        </summary>
+        <ul class="px-6 pb-6 space-y-2 text-gray text-sm">
+          <li class="border-l-2 border-border pl-3 hover:border-neon hover:text-light">
+            Led the software development team across all stages of the development
+            lifecycle, including coding, testing, and implementation.
+          </li>
+          <li class="border-l-2 border-border pl-3 hover:border-neon hover:text-light">
+            Led the team in writing and debugging Java code using the FTC SDK to
+            control the robot's motors, sensors, and actuators in both tele-operated
+            and autonomous modes.
+          </li>
+          <li class="border-l-2 border-border pl-3 hover:border-neon hover:text-light">
+            Provided hands-on instruction in coding practices, logic implementation,
+            and robot design, ensuring alignment with competition rules.
+          </li>
+          <li class="border-l-2 border-border pl-3 hover:border-neon hover:text-light">
+            Assisted students in troubleshooting and improving their code to optimize
+            robot performance, including integration of the Control Hub and Expansion Hub.
+          </li>
+          <li class="border-l-2 border-border pl-3 hover:border-neon hover:text-light">
+            Participated in strategic planning sessions to analyze competition challenges
+            and develop effective autonomous programs.
+          </li>
+        </ul>
+      </details>
+
+      <details name="experience" class="border border-border hover:border-neon group">
+        <summary class="p-6 cursor-pointer list-none">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+            <h3 class="text-light font-bold group-hover:text-neon">
+              &gt; Junior Software Developer @ AtLarge
+            </h3>
+            <span class="text-gray text-sm">11/2022 — 06/2023</span>
+          </div>
+          <div class="flex items-start justify-between">
+            <p class="text-gray text-sm">
+              Supported the full development lifecycle using Python, TypeScript,
+              React, and PHP, collaborating with senior engineers on debugging
+              and project planning.
+            </p>
+            <span class="text-gray group-open:text-neon text-sm ml-4 shrink-0">[+]</span>
+          </div>
+        </summary>
+        <ul class="px-6 pb-6 space-y-2 text-gray text-sm">
+          <li class="border-l-2 border-border pl-3 hover:border-neon hover:text-light">
+            Supported the software development team across all stages of the
+            development lifecycle, including coding, testing, and implementation.
+          </li>
+          <li class="border-l-2 border-border pl-3 hover:border-neon hover:text-light">
+            Worked on front-end and back-end tasks using Python, TypeScript,
+            JavaScript, HTML, CSS, React, PHP.
+          </li>
+          <li class="border-l-2 border-border pl-3 hover:border-neon hover:text-light">
+            Collaborated with senior engineers in identifying solutions, debugging
+            code, and attending developer meetings to discuss project progress.
+          </li>
+          <li class="border-l-2 border-border pl-3 hover:border-neon hover:text-light">
+            Participated in code reviews and quality assurance processes to ensure
+            adherence to coding standards.
+          </li>
+          <li class="border-l-2 border-border pl-3 hover:border-neon hover:text-light">
+            Documented project progress and enhanced coding skills through
+            continuous learning and collaboration.
+          </li>
+        </ul>
+      </details>
+
     </div>
   </Section>
 
@@ -169,30 +279,64 @@ import ProjectCard from '../components/ProjectCard.astro';
   <Section id="contact" title="contact">
     <div class="max-w-xl">
       <p class="text-gray mb-6">
-        &gt; Want to work together or just say hello?
+        &gt; want to work together?
         <br />
-        &gt; Reach me through any of these channels:
+        &gt; reach me through any of these channels:
       </p>
       <div class="space-y-2 text-sm">
         <div class="border border-border p-3 hover:border-neon">
-          <a href="mailto:hello@estefania.dev" class="text-neon hover:bg-neon hover:text-dark px-1">
+          <a href="mailto:e.snchez.c@gmail.com" class="text-neon hover:bg-neon hover:text-dark px-1">
             email
           </a>
-          <span class="text-gray"> — hello@estefania.dev</span>
+          <span class="text-gray"> — e.snchez.c@gmail.com</span>
         </div>
         <div class="border border-border p-3 hover:border-neon">
-          <a href="https://github.com/estefania" target="_blank" rel="noopener noreferrer" class="text-neon hover:bg-neon hover:text-dark px-1">
+          <a href="https://github.com/estefysc" target="_blank" rel="noopener noreferrer" class="text-neon hover:bg-neon hover:text-dark px-1">
             github
           </a>
-          <span class="text-gray"> — github.com/estefania</span>
+          <span class="text-gray"> — github.com/estefysc</span>
         </div>
         <div class="border border-border p-3 hover:border-neon">
-          <a href="https://linkedin.com/in/estefania" target="_blank" rel="noopener noreferrer" class="text-neon hover:bg-neon hover:text-dark px-1">
+          <a href="https://www.linkedin.com/in/estefania-sanchez-172911228/" target="_blank" rel="noopener noreferrer" class="text-neon hover:bg-neon hover:text-dark px-1">
             linkedin
           </a>
-          <span class="text-gray"> — linkedin.com/in/estefania</span>
+          <span class="text-gray"> — linkedin.com/in/estefania-sanchez</span>
         </div>
       </div>
     </div>
   </Section>
 </Layout>
+
+<script>
+  // Typing effect for the hero intro line.
+  // Types out "hello, i'm" one character at a time, then reveals
+  // the rest of the hero content.
+
+  const text = "hello, i'm";
+  const target = document.getElementById("typed-intro");
+  const cursor = document.getElementById("typed-cursor");
+  const heroContent = document.getElementById("hero-content");
+
+  let i = 0;
+
+  function typeChar() {
+    if (!target) return;
+
+    if (i < text.length) {
+      // Append one character at a time
+      target.textContent += text[i];
+      i++;
+      // Random delay between 40-120ms makes it feel like real human typing
+      // (constant speed looks robotic)
+      const delay = Math.random() * 80 + 40;
+      setTimeout(typeChar, delay);
+    } else {
+      // Typing done — hide the intro cursor and reveal the rest
+      cursor?.classList.add("hidden");
+      heroContent?.classList.remove("hidden");
+    }
+  }
+
+  // Start typing after a short pause (lets the page settle visually)
+  setTimeout(typeChar, 500);
+</script>
