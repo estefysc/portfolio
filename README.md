@@ -1,6 +1,6 @@
 # >_ portfolio
 
-Personal portfolio site for Estefania Sanchez — software engineer.
+My personal portfolio site.
 
 Built with a brutalist aesthetic: monospace typography, neon orange on black, zero border-radius, terminal-inspired UI.
 
