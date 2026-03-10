@@ -1,43 +1,61 @@
-# Astro Starter Kit: Minimal
+# >_ portfolio
 
-```sh
-npm create astro@latest -- --template minimal
+Personal portfolio site for Estefania Sanchez — software engineer.
+
+Built with a brutalist aesthetic: monospace typography, neon orange on black, zero border-radius, terminal-inspired UI.
+
+## Tech Stack
+
+- [Astro](https://astro.build/) — static site generator
+- [Tailwind CSS v4](https://tailwindcss.com/) — utility-first styling
+- [Cloudflare Pages](https://pages.cloudflare.com/) — hosting and deployment
+
+## Local Development
+
+```bash
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Site runs at `http://localhost:4321`.
 
-## 🚀 Project Structure
+## Build
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+npm run build
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Output goes to `dist/`.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Project Structure
 
-Any static assets, like images, can be placed in the `public/` directory.
+```
+src/
+├── components/
+│   ├── Nav.astro          # navigation with mobile hamburger menu
+│   ├── Section.astro      # reusable section wrapper
+│   └── ProjectCard.astro  # project card component
+├── layouts/
+│   └── Layout.astro       # base HTML layout with SEO meta tags
+├── pages/
+│   └── index.astro        # single-page site with all sections
+└── styles/
+    └── global.css         # tailwind theme and brutalist base styles
+public/
+├── _headers               # cloudflare pages security headers (CSP, etc.)
+├── favicon.svg            # >_ terminal prompt icon
+└── resume.pdf             # downloadable resume
+```
 
-## 🧞 Commands
+## Features
 
-All commands are run from the root of the project, from a terminal:
+- Typing animation on hero intro
+- Native HTML `<details>` accordions for skills and experience (zero JS)
+- Mobile-responsive hamburger menu
+- Security headers: CSP, X-Frame-Options, Referrer-Policy
+- Open Graph and Twitter Card meta tags
+- Console easter egg for the curious
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## License
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+All rights reserved.
