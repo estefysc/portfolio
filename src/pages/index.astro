@@ -63,11 +63,11 @@ import ProjectCard from '../components/ProjectCard.astro';
       <div>
         {[
           { label: "languages", skills: ["JavaScript", "TypeScript", "Python", "C++", "Rust", "Java", "PHP", "SQL / PL/SQL", "HTML", "CSS", "C#"] },
-          { label: "frameworks + tools", skills: ["React", "Next.js", "Astro", "Node.js", "Flask", "FastAPI", "SQLAlchemy", "Tailwind CSS", "gRPC / Tonic", "Docker", "Git", "Linux", "CI/CD"] },
-          { label: "databases", skills: ["PostgreSQL", "Oracle", "SurrealDB", "Vector Databases"] },
+          { label: "frameworks + tools", skills: ["React", "Next.js", "Astro", "Node.js", "ASP.NET Core", "Entity Framework Core", "Flask", "FastAPI", "SQLAlchemy", "Tailwind CSS", "gRPC / Tonic", "Docker", "Git", "Linux", "CI/CD"] },
+          { label: "databases", skills: ["PostgreSQL", "Oracle", "Kafka (Redpanda)", "SurrealDB", "Vector Databases"] },
           { label: "ml + ai", skills: ["TensorFlow", "PyTorch", "Scikit-learn", "Hugging Face", "AWS Bedrock", "AWS SageMaker"] },
           { label: "agentic coding", skills: ["Claude Code", "Cursor IDE", "ChatGPT", "LangChain", "LangGraph", "RAG", "MCP", "Generative AI"] },
-          { label: "cloud + infra", skills: ["AWS (EC2, S3, Lambda)", "Cloudflare", "DevOps", "Agile"] },
+          { label: "cloud + infra", skills: ["AWS (EC2, S3, CloudFront, ECR, Cognito, Lambda)", "Terraform", "Cloudflare", "DevOps", "Agile"] },
         ].map((category) => (
           <details name="skills" class="mb-4 border border-border hover:border-neon group">
             <summary class="text-neon text-sm px-4 py-3 uppercase tracking-wider cursor-pointer list-none flex items-center justify-between">
@@ -116,6 +116,12 @@ import ProjectCard from '../components/ProjectCard.astro';
   <!-- PROJECTS -->
   <Section id="projects" title="projects">
     <div class="grid md:grid-cols-2 gap-4">
+      <ProjectCard
+        title="threat-lens"
+        description="Cybersecurity threat intelligence platform with a microservices architecture. C#/.NET API and event processor, Python data ingestion workers pulling from NVD, AbuseIPDB, and ThreatFox, Kafka (Redpanda) for event streaming, and a React dashboard. Deployed to AWS with Terraform (EC2, ECR, S3, CloudFront) and Caddy reverse proxy with auto-HTTPS."
+        tech={["C#", ".NET", "Python", "React", "PostgreSQL", "Kafka", "Docker", "Terraform", "AWS"]}
+        link="https://threatlens.live"
+      />
       <ProjectCard
         title="ladybird-browser"
         description="Open-source contributor to Ladybird, a web browser building a modern engine from scratch. Implemented web API features (Badging API, Clear-Site-Data, Battery Status API), fixed browser engine bugs affecting CSP compliance, and contributed specification improvements to the WHATWG standards body. Navigated a 100,000+ line C++ codebase."
